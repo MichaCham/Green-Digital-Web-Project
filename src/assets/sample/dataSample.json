@@ -1,0 +1,164 @@
+{
+  "equipementPhysique": [
+    {
+      "nom_projet": "Projet A",
+      "date_lots": "2024-05-10",
+      "somme_impact": 500,
+      "equipements": [
+        {
+          "type": "Terminal",
+          "somme_impact": 200,
+          "quantite": 15,
+          "etapes_vie": [
+            {
+              "etape": "Fabrication",
+              "impact": 50
+            },
+            {
+              "etape": "Utilisation",
+              "impact": 150
+            }
+          ]
+        },
+        {
+          "type": "Ordinateurs",
+          "somme_impact": 300,
+          "quantite": 10,
+          "etapes_vie": [
+            {
+              "etape": "Fabrication",
+              "impact": 100
+            },
+            {
+              "etape": "Utilisation",
+              "impact": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nom_projet": "Projet B",
+      "date_lots": "2024-06-15",
+      "somme_impact": 700,
+      "equipements": [
+        {
+          "type": "Equipement C",
+          "somme_impact": 400,
+          "etapes_vie": [
+            {
+              "etape": "Fabrication",
+              "impact": 150
+            },
+            {
+              "etape": "Utilisation",
+              "impact": 250
+            }
+          ]
+        },
+        {
+          "type": "Equipement D",
+          "somme_impact": 300,
+          "etapes_vie": [
+            {
+              "etape": "Fabrication",
+              "impact": 100
+            },
+            {
+              "etape": "Utilisation",
+              "impact": 200
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "projetsApplications": [
+    {
+      "nom_projet": "Projet A",
+      "date_lots": "2024-07-20",
+      "somme_impact": 800,
+      "applications": [
+        {
+          "url": "https://www.example.com/app1",
+          "impact": 300,
+          "nombre_requete": 3,
+          "poid_page": 2.5
+        },
+        {
+          "url": "https://www.example.com/app2",
+          "impact": 500,
+          "nombre_requete": 4,
+          "poid_page": 3.2
+        }
+      ]
+    },
+    {
+      "nom_projet": "Projet B",
+      "date_lots": "2024-08-30",
+      "somme_impact": 1200,
+      "applications": [
+        {
+          "url": "https://www.example.com/app3",
+          "impact": 700,
+          "nombre_requete": 3,
+          "poid_page": 4.0
+        },
+        {
+          "url": "https://www.example.com/app4",
+          "impact": 500,
+          "nombre_requete": 4,
+          "poid_page": 2.8
+        }
+      ]
+    }
+  ],
+  "projetTransports": [
+    {
+      "nom_projet": "Projet A",
+      "date_lots": "2024-07-20",
+      "somme_impact": 800,
+      "trajets": [
+        {
+          "quantitePersonnes": 1,
+          "kmVoyageTGV": { "distance": 400, "impact": 100 },
+          "kmVoyageVoiture": { "distance": 0, "impact": 0 },
+          "kmVoyageBus": { "distance": 0, "impact": 0 },
+          "kmVoyageTer": { "distance": 4, "impact": 0 },
+          "kmVoyageMetro": { "distance": 0, "impact": 0 }
+        },
+        {
+          "quantitePersonnes": 2,
+          "kmVoyageTGV": { "distance": 0, "impact": 0 },
+          "kmVoyageVoiture": { "distance": 800, "impact": 1100 },
+          "kmVoyageBus": { "distance": 0, "impact": 0 },
+          "kmVoyageTer": { "distance": 0, "impact": 0 },
+          "kmVoyageMetro": { "distance": 0, "impact": 0 }
+        }
+      ]
+    },
+    {
+      "nom_projet": "Projet B",
+      "date_lots": "2024-08-30",
+      "somme_impact": 1200,
+      "trajets": [
+        {
+          "quantitePersonnes": 1,
+          "kmVoyageTGV": { "distance": 400, "impact": 100 },
+          "kmVoyageVoiture": { "distance": 0, "impact": 0 },
+          "kmVoyageBus": { "distance": 0, "impact": 0 },
+          "kmVoyageTer": { "distance": 4, "impact": 0 },
+          "kmVoyageMetro": { "distance": 0, "impact": 0 }
+        },
+        {
+          "quantitePersonnes": 2,
+          "kmVoyageTGV": { "distance": 0, "impact": 0 },
+          "kmVoyageVoiture": { "distance": 800, "impact": 1100 },
+          "kmVoyageBus": { "distance": 0, "impact": 0 },
+          "kmVoyageTer": { "distance": 0, "impact": 0 },
+          "kmVoyageMetro": { "distance": 0, "impact": 0 }
+        }
+      ]
+    }
+  ]
+}

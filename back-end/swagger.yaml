@@ -1,0 +1,110 @@
+openapi: 3.0.0
+info:
+  title: Projet API
+  version: 1.0.0
+  description: API pour gérer les projets
+  contact:
+    name: Votre nom
+    email: votre_email@example.com
+servers:
+  - url: http://localhost:3000
+    description: Serveur local
+paths:
+  /projets:
+    get:
+      summary: Récupérer tous les projets
+      responses:
+        "200":
+          description: Liste de tous les projets
+        "500":
+          description: Erreur serveur
+    post:
+      summary: Créer un nouveau projet
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nom:
+                  type: string
+      responses:
+        "201":
+          description: Projet créé avec succès
+        "500":
+          description: Erreur serveur
+  /projets/{nom}:
+    get:
+      summary: Récupérer un projet par son nom
+      parameters:
+        - in: path
+          name: nom
+          required: true
+          description: Nom du projet à récupérer
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Détails du projet
+        "404":
+          description: Projet non trouvé
+        "500":
+          description: Erreur serveur
+    delete:
+      summary: Supprimer un projet par son nom
+      parameters:
+        - in: path
+          name: nom
+          required: true
+          description: Nom du projet à supprimer
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Projet supprimé avec succès
+        "404":
+          description: Projet non trouvé
+        "500":
+          description: Erreur serveur
+  /impacts/{nom}/{lots}:
+    get:
+      summary: Obtenir les impacts
+      parameters:
+        - in: path
+          name: nom
+          required: true
+          description: Nom
+          schema:
+            type: string
+        - in: path
+          name: lots
+          required: true
+          description: Lots
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Succès
+        "500":
+          description: Erreur serveur
+  /import:
+    post:
+      summary: Importer un fichier CSV
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Importation réussie
+        "400":
+          description: Aucun fichier trouvé
+        "500":
+          description: Erreur serveur
